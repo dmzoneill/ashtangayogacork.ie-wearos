@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".MainActivity"
+    tools:deviceIds="wear">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/inner_frame_layout_padding"
+        android:orientation="vertical"
+        app:layout_boxedEdges="all">
+
+        <FrameLayout
+            android:id="@+id/landingView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/inner_frame_layout_padding"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_boxedEdges="all">
+
+            <ImageView
+                android:id="@+id/ganeshImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:src="@mipmap/sticker_ganesh"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/mainView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/inner_frame_layout_padding"
+            android:layout_margin="@dimen/box_inset_layout_padding"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            app:layout_boxedEdges="all"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/settingsImage"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:src="@mipmap/gears"/>
+
+            <ImageView
+                android:id="@+id/doorImage"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@mipmap/door_red"/>
+
+            <TextView
+                android:id="@+id/nextclass"
+                android:text="next class"
+                android:visibility="gone"
+                android:textSize="6pt"
+                android:layout_width="110dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"/>
+
+            <ImageView
+                android:id="@+id/backImage"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:src="@mipmap/back"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/settingsView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/inner_frame_layout_padding"
+            android:orientation="vertical"
+            app:layout_boxedEdges="all"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/usernameInput"
+                android:hint="Username"
+                android:layout_marginTop="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/passwordInput"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/backSaveImage"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="0dp"
+                android:src="@mipmap/back"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.wear.widget.BoxInsetLayout>
