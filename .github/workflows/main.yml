@@ -1,4 +1,4 @@
-name: ashtangayogacork.ie-wearos
+name: CICD
 
 on:
   push:
